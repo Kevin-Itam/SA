@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style2.0.css"> 
+    <title>Menu</title>
+</head>
+<style>
+.imag{
+    margin-top: 90px;
+    margin-left: 100px;
+}
+.pe{
+    color: black;
+    margin-left: 103px;
+    text-decoration-line: none;
+}
+.linke{
+    color: black;
+    font-size: 25px;
+    text-decoration-line: none;
+}
+.perfill{
+top: 0;
+left: 0;
+position: fixed;
+text-align: center;
+width: 100vw;
+height: 70px;
+border-bottom:solid 1px black ;
+background: rgb(127, 219, 255);
+}
+.divdown{
+    margin-left: 93px;
+}
+.divdown1{
+    margin-left: 65px;
+}
+.divdown2{
+    margin-left: 45px;
+}
+</style>
+<body>
+    <!--Menu Lateral-->
+    <div class="perfill">
+        <img src="./img/user.png" alt="some text" width="40" height="40">
+        <div>Nome</div>
+    </div>
+
+   <!--Menu das Paginas-->
+
+<section class="sec-pai-menu">
+    <!--Primeira seção-->
+    <a href="cad_cliente.html" class="linke">
+        <section class="sec-top1_menu" >
+            <div>
+                <img src="./img/cadastro.png" class="imag" alt="some text" width="100" height="100">
+                <div align="center" >Cadastro de clientes</div>
+            
+            </div>
+        </section>
+    </a>
+    <!--Segunda seção-->
+
+    <a href="cad_funcionario.html" class="linke">
+        <section class="sec-top2_menu">
+            <div>
+                <img src="./img/registo.png" class="imag" alt="some text" width="100" height="100">
+                <header align="center">Cadastro de Funcionario</header>
+            </div>
+        </section>
+    </a>
+
+</section>
+
+<!--SEÇÃO DE BAIXO-->
+
+<section class="sec-pai2">
+    <!--Primeira seção-->
+    <a href="consulta_cliente.php" class="linke">
+        <section class="sec-down1" >
+            <div>
+                <img src="./img/cliente.png" class="imag" alt="some text" width="100" height="100">
+                <div align="center" class="divdown1" >Consultar Cliente</div>
+            
+            </div>
+        </section>
+    </a>
+    <!--Segunda seção-->
+
+    <a href="consulta_func.html" class="linke">
+        <section class="sec-down2">
+            <div>
+                <img src="./img/tecnico.png" class="imag" alt="some text" width="100" height="100">
+                <header align="center" class="divdown2">Consultar Funcionario</header>
+            </div>
+        </section>
+    </a>    
+
+    <!--Terceira seção-->
+
+    <a href="historico.html" class="linke">
+        <section class="sec-down3">
+            <div>
+                <img src="./img/historia.png" class="imag" alt="some text" width="100" height="100">
+                <header align="center" class="divdown">Historicos</header>
+            </div>
+        </section>
+    </a>  
+
+</section>
+
+
+</body>
+</html>

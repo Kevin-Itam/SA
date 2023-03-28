@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style2.0.css">
+    <title>Historicos</title>
+</head>
+<style>
+    .imag{
+        margin-top: 90px;
+        margin-left: 100px;
+    }
+    .pe{
+        color: black;
+        margin-left: 103px;
+        text-decoration-line: none;
+    }
+    .linke{
+        color: black;
+        font-size: 25px;
+        text-decoration-line: none;
+    }
+</style>
+<body>  
+    <div class="perfil">
+        <img src="./img/user.png" alt="some text" width="40" height="40">
+        <a>Nome</a>
+    </div>
+    <div class="forum_menu">
+        <ul>
+            <li class="list active"> 
+                    <a href="menu.html" >
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="titulo">Home</span>
+                    </a>                
+            </li>
+            <li class="list">
+                <a href="cad_cliente.html">
+                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
+                    <span class="titulo">Clintes</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="cad_funcionario.html">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="titulo">Funcionario</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="cad_os.html">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="titulo">Trabalhos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="historico.html" target="_self">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="titulo">Historicos</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+    <!--SEÇÃO DAS CONSULTAS -->
+    <section class="sec-pai">
+        <!--Primeira seção-->
+        <a href="consulta_cliente.html" class="linke">
+            <section class="sec-top1" >
+                <div>
+                    <img src="./img/user.png" class="imag" alt="some text" width="100" height="100">
+                    <div align="center" >Cliente</div>
+                
+                </div>
+            </section>
+        </a>
+        <a class="linha"></a>
+        <a class="linha_hr"></a>
+        <!--Segunda seção-->
+        <a href="consulta_func.html" class="linke">
+            <section class="sec-top2">
+                <div>
+                    <img src="./img/suporte-tecnico.png" class="imag" alt="some text" width="100" height="100">
+                    <header align="center">Funcionario</header>
+                </div>
+            </section>
+        </a>    
+    </section>
+
+
+    <!--Terceira seção-->
+    <a href="consultaOS.html" class="linke">
+        <section class="sec-down">
+            <div>
+                <img src="./img/servico.png" class="imag" alt="some text" width="100" height="100">
+                <header class="pe">Pedidos</header>
+            </div>
+        </section>
+    </a>
+
+
+    
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item) =>
+    item.addEventListener('click', activeLink));
+</script>
+</body>
+</html>

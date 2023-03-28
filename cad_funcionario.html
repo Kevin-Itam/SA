@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Funcionarios</title>
+    <link rel="stylesheet" href="./CSS/style2.0.css">
+    <script src="./CSS/bootstrap.js"></script>
+</head>
+<style>
+    input::placeholder{
+        color: black;
+    }
+</style>
+<body id="corpocadfun">
+
+    <div>asdasdsa</div>
+
+   
+    <div class="perfil">
+        <img src="./img/user.png" alt="some text" width="40" height="40">
+        <div>Nome</div>
+    </div>
+    <div class="forum_menu">
+        <ul>
+            <li class="list active"> 
+                    <a href="menu.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="titulo">Home</span>
+                    </a>                
+            </li>
+            <li class="list">
+                <a href="cad_cliente.html">
+                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon>
+                    </span>
+                    <span class="titulo">Clintes</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="cad_funcionario.html" target="_self">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="titulo">Funcionario</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="cad_os">
+                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="titulo">Trabalhos</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="historico.html">
+                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                    <span class="titulo">Historicos</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+
+
+<div class="forum_user">
+    <form action="inclueOS.php" method="post">
+        <fieldset class="fieldset">
+            <conteiner class="conteiner">
+                <div >
+                        <img src="./img/user.png" alt="some text" width="80" height="80">
+                        <div>Perfil</div>
+                </div>
+                
+                <br><br>
+                    <div>
+                        <input type="text" class="barra1 name_user" name="name_user" placeholder="Nome Completo" required>
+                        <br><br>
+                        <input type="text" class="barra1 cpf_user" name="cpf_user" placeholder="CPF" required>
+                        <br><br>
+                        <input type="text" class="barra1 e-mail_user" name="e-mail_user" placeholder="E-mail" required>
+                        <br><br>
+                        <input type="text" class="barra1 celular_user" name="celular_user" placeholder="Celular" required>
+                        <br><br>
+                    </div>
+            </conteiner>
+            
+        </fieldset>
+        <fieldset class="fieldset2">
+            <br>
+            <input type="text"   class="barra Cidade" name="Cidade" placeholder="Cidade" required>
+            <input type="text"   class="barra bairro_user" name="bairro_user" placeholder="Bairro" required>
+            <input type="text"   class="barra rua_user" name="rua_user" placeholder="Rua" required>
+            <input type="text"   class="barra complemento_user" name="complemento_user" placeholder="Complemento" required>
+            <input type="number" class="barra numero_user" name="numero_user" placeholder="Numero" required>
+            <input type="text"   class="barra cep_user" name="cep_user" placeholder="CEP" required>
+
+        </fieldset>
+        <br>
+        <div class="divbtn">
+            <button type="submit" class="btn-system">Salvar</button>
+            <button  class="btn-system">Editar</button>
+            <button  class="btn-system">Excluir</button>
+        </div>
+        
+    </form>
+
+</div>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const list = document.querySelectorAll('.list');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('active'));
+        this.classList.add('active');
+    }
+    list.forEach((item) =>
+    item.addEventListener('click', activeLink));
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3a1453d3f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style2.0.css">
+    <title>Login</title>
+</head>
+<style>
+#imguser{
+    position: absolute;
+    height: 121px;
+    width: 120px;
+    margin-top: 40px;
+    margin-left: 212px;
+    
+}
+</style>
+
+<body id="corpo">
+     <!--Formulario da pagina-->
+     <header class="cabeçalho">
+        <p class="titulo" >Roger</p>
+        <p >(Manutenção de Computadores)</p>
+    </header>
+
+     <form  action="sessao.php" method="post">        
+        <section class="login">
+            <img id="imguser"src="./img/user.png" alt="some text">
+            <header class="log">
+                Login 
+            </header> 
+
+                <div class="backuser">
+                    <input name="campoUsuariologin" type="text" class="user" placeholder="Digite seu usuario">
+                    <i id="icouser" class="fa-solid fa-user" aria-hidden="true"></i>
+                </div>
+                <br><br>
+                <div class="backsenha"> 
+                    <input name="campoSenhalogin" type="password" class="senha" placeholder="Digite sua senha">
+                    <i id="icopass" class="fa-solid fa-lock"></i>
+                </div>
+                <br><br>
+                <button name="btn" type="submit" class="btn_login">Entrar</button>
+
+            
+        </section>
+    </form>
+</body>
+</html>
