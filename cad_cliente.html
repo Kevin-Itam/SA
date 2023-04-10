@@ -8,6 +8,9 @@
     <title>Cadastro de Clientes</title>
     <link rel="stylesheet" href="./CSS/style2.0.css">
     <script src="./JS/Validacao.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+            crossorigin="anonymous"></script>
 </head>
 
 <body id="corpocadfun">
@@ -53,7 +56,7 @@
         </ul>
     </div>
 
-    <div class="forum_user">
+    <div class="forum_user" >
         <form id="form">
             <fieldset class="fieldset">
                 <conteiner class="conteiner">
@@ -68,7 +71,7 @@
                             placeholder="Nome Completo" id="nome">
                         <span class="span-required">O campo nome Precisa ser preenchido</span>
                         <br><br>
-                        <input type="text" class="barra1 cpf_user required" name="cpf_user" placeholder="CPF">
+                        <input type="text" id="cpf" class="barra1 cpf_user required" name="cpf_user" placeholder="CPF">
                         <span class="span-required">O campo CPF precisa ser preenchido</span>
                         <br><br>
                         <input type="text" id="Email" class="barra1 e-mail_user required" name="e-mail_user" placeholder="E-mail">
@@ -82,14 +85,19 @@
                 </conteiner>
 
             </fieldset>
-            <fieldset class="fieldset2">
+            <fieldset class="fieldset2" id="signup-content">
                 <br>
-                <input type="text" class="barra Cidade" name="Cidade" placeholder="Cidade">
-                <input type="text" class="barra bairro_user" name="bairro_user" placeholder="Bairro">
-                <input type="text" class="barra rua_user" name="rua_user" placeholder="Rua">
-                <input type="text" class="barra complemento_user" name="complemento_user" placeholder="Complemento">
-                <input type="number" class="barra numero_user" name="numero_user" placeholder="Numero">
-                <input type="text" class="barra cep_user" name="cep_user" placeholder="CEP">
+                <input type="text" class="barra cep_user" name="cep_user" id="cep" placeholder="CEP" maxlength="8">
+
+                <input type="text" class="barra Cidade" name="Cidade_estado" placeholder="Cidade" readonly required >
+
+                <input type="text" class="barra bairro_user" name="bairro_user" placeholder="Bairro" readonly required >
+
+                <input type="text" class="barra rua_user" name="rua_user" placeholder="Rua" readonly required >
+
+                <input type="text" class="barra complemento_user" name="complemento_user" id="Complemento" placeholder="Complemento">
+
+                <input type="number" class="barra numero_user" name="numero_user" id="Numb" placeholder="Numero">
 
             </fieldset>
             <br>
