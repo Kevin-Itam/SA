@@ -45,6 +45,8 @@ form.addEventListener("submit", (event => {
     alert("Por favor Digite seu Completeo");
     return;
   }
+//Valida o CPF
+
 
   form.submit();
 }));
@@ -105,48 +107,35 @@ $(function () {
 
 //Validaçao do CPF
 
-function isCPF(cpfUs) {
-  console.log(cpfUs);
-  cpfUs = cpfUs.value.replace(/\.|-/g, "");
-  console.log(cpfUs);
-  if (!validaPrimeiroDigito(cpfUs))
-    return false;
-  if (!validaSegundoDigito(cpfUs))
-    return false;
-
-  return true;
-
-}
-var sum = 0;
-
-function validaPrimeiroDigito(cpfUs = null) {
-  let fDigit = (sumFristDigit(cpfUs) * 10) % 11;
-  fDigit = (fDigit == 10 || fDigit == 11) ? 0 : fDigit;
-  if (fDigit != cpfUs[9])
-    return false
-  return true;
-}
-function validaSegundoDigito(cpfUs = null) {
-  let sDigit = (sumSecondDigit(cpfUs) * 10) % 11;
-  sDigit = (sDigit == 10 || sDigit == 11) ? 0 : sDigit;
-
-  if (sDigit != cpfUs[10])
-    return false
-  return true;
-}
-
-
-sumFristDigit = function (cpfUs, position = 0, sum = 0) {
-  if (position > 9)
-    return 0;
-  return sum + sumFristDigit(cpfUs, position + 1, cpfUs[position] * ((cpfUs.length - 1) - position));
-}
-
-
-sumSecondDigit = function (cpfUs, position = 0, sum = 0) {
-  if (position > 10)
-    return 0;
-  return sum + sumSecondDigit(cpfUs, position + 1, cpfUs[position] * ((cpfUs.length) - position));
-}
-
-console.log(isCPF(cpfUs));
+jQuery(document).ready(function(){
+    
+  var cpf_field = '#cpf';
+  
+  jQuery(cpf_field).blur(function(){
+      var cpf = jQuery(cpf_field).val();
+      if(cpf.length == 11){
+          var v = [];
+          //Calcula o primeiro dígito de verificação.
+          v[0] = 1 * cpf[0] + 2 * cpf[1] + 3 * cpf[2];
+          v[0] += 4 * cpf[3] + 5 * cpf[4] + 6 * cpf[5];
+          v[0] += 7 * cpf[6] + 8 * cpf[7] + 9 * cpf[8];
+          v[0] = v[0] % 11;
+          v[0] = v[0] % 10;
+          //Calcula o segundo dígito de verificação.
+          v[1] = 1 * cpf[1] + 2 * cpf[2] + 3 * cpf[3];
+          v[1] += 4 * cpf[4] + 5 * cpf[5] + 6 * cpf[6];
+          v[1] += 7 * cpf[7] + 8 * cpf[8] + 9 * v[0];
+          v[1] = v[1] % 11;
+          v[1] = v[1] % 10;
+          //Retorna Verdadeiro se os dígitos de verificação são os esperados.
+          if ((v[0] != cpf[9]) || (v[1] != cpf[10])){
+              jQuery(cpf_field).css("border","8px solid red");
+              jQuery(cpf_field).val("");
+              jQuery(cpf_field).focus();
+              
+          }else{
+              jQuery(cpf_field).css("border","2px solid green");
+          }
+      }
+  });
+});
