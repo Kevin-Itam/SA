@@ -9,93 +9,49 @@
     <link rel="stylesheet" href="./CSS/style2.0.css">
     <script src="./JS/Validacao.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous"></script>
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 </head>
 
-<body id="corpocadfun">
-
-    <div class="perfil">
-        <img src="./img/user.png" alt="some text" width="40" height="40">
-        <div>Nome</div>
-    </div>
-    <div class="forum_menu">
-        <ul>
-            <li class="list active">
-                <a href="menu.html">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <span class="titulo">Home</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="cad_cliente.html" target="_self">
-                    <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon>
-                    </span>
-                    <span class="titulo">Clintes</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="cad_funcionario.html">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <span class="titulo">Funcionario</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="ca_os">
-                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
-                    <span class="titulo">Trabalhos</span>
-                </a>
-            </li>
-            <li class="list">
-                <a href="historico.html">
-                    <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-                    <span class="titulo">Historicos</span>
-                </a>
-            </li>
-
-        </ul>
-    </div>
-
-    <div class="forum_user" >
+<body>
+    <div class="DivBody">
         <form id="form">
-            <fieldset class="fieldset">
-                <conteiner class="conteiner">
-                    <div>
-                        <img src="./img/user.png" alt="some text" width="80" height="80">
-                        <div>Perfil</div>
+
+
+            <section class="fieldset SecForm">
+
+                    <div class="SecForm">
+                        <header>Informações Pessoais do Funcionario</header>
+                        <br><br><br>
+                        <input type="text" id="nome" class="barra1 required" name="name_user">
+                        <label> Nome</label>
+                        <br><br>
+                        <input type="text" id="cpf" class="barra1 cpf_user required" name="cpf_user" >
+                        <label>CPF</label>
+                        <br><br>
+                        <input type="text" id="Email" class="barra1 e-mail_user required" name="e-mail_user">
+                        <label>E-Mail</label>
+                        <br><br>
+                        <input type="text" id="celular" class="barra1 celular_user required" name="celular_user">
+                        <label> Celular</label>
+                        <br><br>
                     </div>
 
-                    <br><br>
-                    <div>
-                        <input type="text" class="barra1 required" name="name_user"
-                            placeholder="Nome Completo" id="nome">
-                        <span class="span-required">O campo nome Precisa ser preenchido</span>
-                        <br><br>
-                        <input type="text" id="cpf" class="barra1 cpf_user required" name="cpf_user" placeholder="CPF">
-                        <span class="span-required">O campo CPF precisa ser preenchido</span>
-                        <br><br>
-                        <input type="text" id="Email" class="barra1 e-mail_user required" name="e-mail_user" placeholder="E-mail">
-                        <span class="span-required" v>O campo Email precisa ser preenchido</span>
-                        <br><br>
-                        <input type="text" class="barra1 celular_user required" id="celular" name="celular_user"
-                            placeholder="Celular">
-                        <span class="span-required">O campo Celular precisa ser preenchido</span>
-                        <br><br>
-                    </div>
-                </conteiner>
+            </section>
 
-            </fieldset>
+
+
             <fieldset class="fieldset2" id="signup-content">
                 <br>
                 <input type="text" class="barra cep_user" name="cep_user" id="cep" placeholder="CEP" maxlength="8">
 
-                <input type="text" class="barra Cidade" name="Cidade_estado" placeholder="Cidade" readonly required >
+                <input type="text" class="barra Cidade" name="Cidade_estado" placeholder="Cidade" readonly required>
 
-                <input type="text" class="barra bairro_user" name="bairro_user" placeholder="Bairro" readonly required >
+                <input type="text" class="barra bairro_user" name="bairro_user" placeholder="Bairro" readonly required>
 
-                <input type="text" class="barra rua_user" name="rua_user" placeholder="Rua" readonly required >
+                <input type="text" class="barra rua_user" name="rua_user" placeholder="Rua" readonly required>
 
-                <input type="text" class="barra complemento_user" name="complemento_user" id="Complemento" placeholder="Complemento">
+                <input type="text" class="barra complemento_user" name="complemento_user" id="Complemento"
+                    placeholder="Complemento">
 
                 <input type="number" class="barra numero_user" name="numero_user" id="Numb" placeholder="Numero">
 
